@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_scripts /build
 COPY system_files /files
 
-FROM docker.io/cachyos/cachyos:latest AS builder
+FROM docker.io/cachyos/cachyos:latest@sha256:d7aa9b2da42456e76117a785418b4325ee71b17d75bdc9749b2883671ef7ea6c AS builder
 
 ENV DEV_DEPS="base-devel git rust"
 
